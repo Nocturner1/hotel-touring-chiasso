@@ -13,10 +13,10 @@ body{font-family:'Fjalla One',sans-serif;background:var(--white);color:var(--bla
 
 /* LANG BAR */
 .lang-bar{position:fixed;top:0;left:0;right:0;z-index:500;background:var(--black);display:flex;justify-content:flex-end;align-items:center;padding:7px 40px;gap:4px}
-.lang-btn{background:none;border:none;font-family:'Fjalla One',sans-serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.35);cursor:pointer;padding:4px 10px;transition:color .2s;border-bottom:1px solid transparent}
+.lang-btn{background:none;border:none;font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.35);cursor:pointer;padding:4px 10px;transition:color .2s;border-bottom:1px solid transparent}
 .lang-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
 .lang-btn:hover{color:var(--white)}
-.lang-sep{color:rgba(255,255,255,.15);font-size:9px}
+.lang-sep{color:rgba(255,255,255,.15);font-size:13px}
 
 /* HEADER */
 header{position:fixed;top:30px;left:0;right:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;background:var(--white);border-bottom:2px solid var(--black)}
@@ -26,24 +26,24 @@ header{position:fixed;top:30px;left:0;right:0;z-index:400;display:flex;align-ite
 .logo-motif .ci{width:22px;height:22px;background:var(--black);border-radius:50%;flex-shrink:0}
 .logo-text{display:flex;flex-direction:column;justify-content:center;gap:3px}
 .logo-name{font-size:22px;letter-spacing:4px;text-transform:uppercase;line-height:1;display:block}
-.logo-sub{font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;line-height:1;display:block}
+.logo-sub{font-size:13px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;line-height:1;display:block}
 nav{display:flex;align-items:center;gap:24px}
-nav a{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--black);text-decoration:none;transition:color .2s}
+nav a{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--black);text-decoration:none;transition:color .2s}
 nav a:hover{color:var(--gold)}
-.mews-header-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--black);padding:13px 22px;font-family:'Fjalla One',sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
+.mews-header-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--black);padding:13px 22px;font-family:'Fjalla One',sans-serif;font-size:15px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
 .mews-header-btn:hover{background:var(--black);color:var(--gold)}
 
 /* FIXED BOOKING BUTTON */
 .fixed-book{position:fixed;bottom:32px;right:32px;z-index:600;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.fixed-book-bubble{background:var(--black);color:var(--white);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;position:relative;animation:bubblePop 3s ease-in-out infinite;white-space:nowrap}
+.fixed-book-bubble{background:var(--black);color:var(--white);font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;position:relative;animation:bubblePop 3s ease-in-out infinite;white-space:nowrap}
 .fixed-book-bubble::after{content:'';position:absolute;bottom:-6px;right:28px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid var(--black)}
 .fixed-book-btn{display:flex;align-items:center;text-decoration:none;box-shadow:0 8px 32px rgba(0,0,0,.35);animation:floatBtn 3s ease-in-out infinite;position:relative;overflow:hidden}
 .fixed-book-btn::before{content:'';position:absolute;inset:-4px;border:2px solid var(--gold);animation:ringPulse 2s ease-in-out infinite;pointer-events:none}
 .btn-icon{background:var(--gold);color:var(--black);width:72px;height:72px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;transition:background .2s}
 .btn-text-block{background:var(--black);color:var(--white);padding:0 24px;height:72px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;transition:background .2s}
-.btn-text-top{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);line-height:1}
+.btn-text-top{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);line-height:1}
 .btn-text-main{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--white);line-height:1;white-space:nowrap}
-.btn-text-sub{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);line-height:1}
+.btn-text-sub{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);line-height:1}
 .fixed-book-btn:hover .btn-icon{background:var(--white)}
 .fixed-book-btn:hover .btn-text-block{background:var(--gold)}
 .fixed-book-btn:hover .btn-text-main{color:var(--black)}
@@ -59,10 +59,10 @@ nav a:hover{color:var(--gold)}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.42) 50%,rgba(0,0,0,.12) 100%)}
 .hero-bird{position:absolute;right:60px;top:120px;opacity:.06;z-index:1;pointer-events:none}
 .hero-content{position:relative;z-index:2;padding:60px 40px;max-width:800px;color:var(--white)}
-.hero-eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero-eyebrow{font-size:14px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
 .hero-title{font-size:clamp(64px,11vw,130px);line-height:.88;letter-spacing:-3px;text-transform:uppercase;margin-bottom:28px}
 .hero-title .accent{color:var(--gold)}
-.hero-body{font-size:12px;letter-spacing:2px;line-height:2;text-transform:uppercase;max-width:460px;margin-bottom:40px;border-left:3px solid var(--gold);padding-left:16px;opacity:.85}
+.hero-body{font-size:15px;letter-spacing:2px;line-height:2;text-transform:uppercase;max-width:460px;margin-bottom:40px;border-left:3px solid var(--gold);padding-left:16px;opacity:.85}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 .hero-cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);padding:20px 42px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:2px solid var(--gold);transition:all .25s}
 .hero-cta-primary:hover{background:var(--black);color:var(--gold)}
@@ -72,14 +72,14 @@ nav a:hover{color:var(--gold)}
 /* TICKER */
 .ticker{overflow:hidden;border-top:2px solid var(--black);border-bottom:2px solid var(--black);padding:18px 0;background:var(--white)}
 .ticker-track{display:flex;gap:60px;animation:ticker 22s linear infinite;white-space:nowrap}
-.ticker-item{font-size:12px;letter-spacing:4px;text-transform:uppercase;display:flex;align-items:center;gap:20px;flex-shrink:0}
+.ticker-item{font-size:15px;letter-spacing:4px;text-transform:uppercase;display:flex;align-items:center;gap:20px;flex-shrink:0}
 .ticker-item .dot{color:var(--gold)}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* MEWS STRIP */
 .mews-strip{background:var(--gold);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .mews-strip-title{font-size:28px;text-transform:uppercase;color:var(--black)}
-.mews-strip-sub{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,.5);margin-top:4px}
+.mews-strip-sub{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,.5);margin-top:4px}
 .mews-strip-btn{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:var(--white);padding:20px 48px;font-family:'Fjalla One',sans-serif;font-size:15px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:2px solid var(--black);transition:all .25s;white-space:nowrap}
 .mews-strip-btn:hover{background:var(--white);color:var(--black)}
 
@@ -98,10 +98,10 @@ nav a:hover{color:var(--gold)}
 .tile:hover p{opacity:.7}
 .tile.mews-tile:hover{background:var(--gold);color:var(--black)}
 .tile.mews-tile:hover .tile-num{color:rgba(0,0,0,.5)}
-.tile-num{font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:24px;transition:color .2s}
+.tile-num{font-size:14px;letter-spacing:4px;color:var(--gold);margin-bottom:24px;transition:color .2s}
 .tile-icon{font-size:40px;letter-spacing:-5px;color:rgba(0,0,0,.07);margin-bottom:16px;line-height:1;transition:color .2s}
 .tile h3{font-size:22px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
-.tile p{font-size:10px;letter-spacing:2px;line-height:1.9;text-transform:uppercase;opacity:.65;transition:opacity .2s}
+.tile p{font-size:14px;letter-spacing:2px;line-height:1.9;text-transform:uppercase;opacity:.65;transition:opacity .2s}
 .tile-arrow{position:absolute;bottom:24px;right:28px;font-size:16px;opacity:.35;transition:opacity .2s,transform .2s}
 .tile:hover .tile-arrow{opacity:1;transform:translateX(4px)}
 
@@ -110,7 +110,7 @@ nav a:hover{color:var(--gold)}
 .gallery-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px}
 .gallery-header h2{font-size:clamp(28px,4vw,48px);text-transform:uppercase;letter-spacing:-1px}
 .gallery-header h2 em{font-style:normal;color:var(--gold)}
-.gallery-header span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,.35)}
+.gallery-header span{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,.35)}
 .gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:200px 200px;gap:3px}
 .g-img{overflow:hidden;position:relative;cursor:pointer}
 .g-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,filter .4s ease;filter:grayscale(15%)}
@@ -133,44 +133,44 @@ nav a:hover{color:var(--gold)}
 .badge-score{font-size:44px;color:var(--gold);line-height:1}
 .badge-info{display:flex;flex-direction:column;gap:3px}
 .badge-label{font-size:14px;letter-spacing:2px;text-transform:uppercase}
-.badge-count{font-size:9px;letter-spacing:3px;text-transform:uppercase;opacity:.4}
-.badge-source{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:4px}
+.badge-count{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.4}
+.badge-source{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:4px}
 .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;background:rgba(255,255,255,.04)}
 .review-card{background:var(--black);padding:32px 28px;border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:16px;transition:border-color .25s}
 .review-card:hover{border-color:var(--gold)}
-.review-quote{font-size:11px;letter-spacing:1.5px;line-height:2;text-transform:uppercase;opacity:.7;flex:1;position:relative;padding-left:18px}
+.review-quote{font-size:14px;letter-spacing:1.5px;line-height:2;text-transform:uppercase;opacity:.7;flex:1;position:relative;padding-left:18px}
 .review-quote::before{content:'"';position:absolute;left:0;top:-4px;font-size:28px;color:var(--gold);line-height:1;opacity:.55}
 .review-meta{display:flex;align-items:center;justify-content:space-between}
-.review-author{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
-.review-flag{font-size:9px;letter-spacing:2px;text-transform:uppercase;opacity:.3}
+.review-author{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.review-flag{font-size:13px;letter-spacing:2px;text-transform:uppercase;opacity:.3}
 
 /* HERITAGE */
 .heritage{background:var(--black);color:var(--white);padding:80px 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .heritage-left h2{font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-1px;line-height:1;margin-bottom:24px}
 .heritage-left h2 em{font-style:normal;color:var(--gold)}
-.heritage-left p{font-size:11px;letter-spacing:2px;line-height:2;text-transform:uppercase;opacity:.6;max-width:400px}
+.heritage-left p{font-size:14px;letter-spacing:2px;line-height:2;text-transform:uppercase;opacity:.6;max-width:400px}
 .heritage-right{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .heritage-stat{padding:32px 24px;border:1px solid rgba(255,255,255,.08)}
 .heritage-stat .num{font-size:48px;color:var(--gold);line-height:1;margin-bottom:8px}
-.heritage-stat .label{font-size:9px;letter-spacing:3px;text-transform:uppercase;opacity:.4}
+.heritage-stat .label{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.4}
 
 /* LOCATION */
 .location{padding:80px 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:2px solid var(--black);align-items:start}
 .location-info h2{font-size:48px;text-transform:uppercase;letter-spacing:-1px;line-height:1;margin-bottom:32px}
 .location-info h2 em{font-style:normal;color:var(--gold)}
-.info-row{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-bottom:1px solid rgba(0,0,0,.1);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.info-row{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-bottom:1px solid rgba(0,0,0,.1);font-size:14px;letter-spacing:2px;text-transform:uppercase}
 .info-row .icon{color:var(--gold);flex-shrink:0;margin-top:1px}
 .info-row a{color:var(--black);text-decoration:none;transition:color .2s}
 .info-row a:hover{color:var(--gold)}
 .location-map-box{height:360px;background:var(--black);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;border:2px solid var(--black)}
-.location-map-box p{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+.location-map-box p{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.35)}
 .map-motif{font-size:56px;letter-spacing:-8px;color:var(--gold)}
 
 /* FOOTER */
 footer{background:var(--black);color:var(--white);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:3px solid var(--gold)}
 .footer-logo{font-size:18px;letter-spacing:4px;text-transform:uppercase}
-.footer-copy{font-size:9px;letter-spacing:3px;text-transform:uppercase;opacity:.35}
-.footer-sinnvoll{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.footer-copy{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.35}
+.footer-sinnvoll{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
 
 /* PANEL */
 .panel-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:700}
@@ -180,22 +180,22 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
 .panel-header{padding:40px 40px 28px;border-bottom:2px solid var(--black);position:sticky;top:0;background:var(--white);z-index:1}
 .panel-close{position:absolute;top:20px;right:24px;font-size:22px;background:none;border:none;cursor:pointer;font-family:'Fjalla One',sans-serif;color:var(--black);transition:color .2s}
 .panel-close:hover{color:var(--gold)}
-.panel-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.panel-eyebrow{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .panel-title{font-size:34px;text-transform:uppercase;letter-spacing:-1px;line-height:1}
 .panel-body{padding:40px;flex:1}
-.panel-body>p{font-size:11px;letter-spacing:1.5px;line-height:2;text-transform:uppercase;margin-bottom:24px;opacity:.75}
+.panel-body>p{font-size:14px;letter-spacing:1.5px;line-height:2;text-transform:uppercase;margin-bottom:24px;opacity:.75}
 .panel-features{list-style:none;margin-bottom:32px}
-.panel-features li{display:flex;align-items:flex-start;gap:12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.panel-features li{display:flex;align-items:flex-start;gap:12px;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.08)}
 .panel-features li::before{content:'■';color:var(--gold);flex-shrink:0;margin-top:1px}
 .mews-panel-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--black);padding:22px;font-family:'Fjalla One',sans-serif;font-size:15px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:2px solid var(--gold);transition:all .25s;margin-bottom:28px;width:100%}
 .mews-panel-btn:hover{background:var(--black);color:var(--gold);border-color:var(--black)}
 .contact-form h4{font-size:13px;letter-spacing:4px;text-transform:uppercase;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--black)}
 .form-group{margin-bottom:18px}
-.form-group label{display:block;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 14px;font-family:'Fjalla One',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;background:var(--white);border:2px solid var(--black);color:var(--black);outline:none;transition:border-color .2s;appearance:none}
+.form-group label{display:block;font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 14px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;background:var(--white);border:2px solid var(--black);color:var(--black);outline:none;transition:border-color .2s;appearance:none}
 .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
 .form-group textarea{resize:vertical;min-height:90px}
-.btn-submit{width:100%;padding:18px;background:var(--black);color:var(--white);border:2px solid var(--black);font-family:'Fjalla One',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:all .25s;margin-top:8px}
+.btn-submit{width:100%;padding:18px;background:var(--black);color:var(--white);border:2px solid var(--black);font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:all .25s;margin-top:8px}
 .btn-submit:hover{background:var(--gold);border-color:var(--gold);color:var(--black)}
 
 /* ANIMATIONS */
@@ -225,7 +225,7 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
   .hero-bird{display:none}
   .fixed-book{bottom:16px;right:16px}
   .btn-text-block{padding:0 14px}
-  .btn-text-main{font-size:11px}
+  .btn-text-main{font-size:14px}
 }
 </style>
 </head>
@@ -426,7 +426,7 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
     <div class="map-motif">■●</div>
     <p>Piazza Indipendenza 1 · Chiasso</p>
     <a href="https://maps.google.com/?q=Piazza+Indipendenza+1+Chiasso" target="_blank"
-       style="color:var(--gold);font-size:9px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin-top:12px;"
+       style="color:var(--gold);font-size:13px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin-top:12px;"
        data-i18n="loc_maps">Auf Maps öffnen →</a>
   </div>
 </section>
@@ -444,7 +444,7 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
   <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
     <div class="footer-sinnvoll" data-i18n="footer_claim">Von der Region. Für die Region. ■</div>
     <a href="#" onclick="openPanel('impressum');return false;"
-       style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s;"
+       style="font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s;"
        onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,.25)'"
        data-i18n="footer_impressum">Impressum</a>
   </div>
@@ -771,7 +771,7 @@ function buildPanel(id) {
         <li>Piazza Indipendenza 1, 6830 Chiasso</li>
         <li><a href="mailto:hotel.touring@sinnvollgastro.ch" style="color:var(--gold)">hotel.touring@sinnvollgastro.ch</a></li>
       </ul>
-      <p style="font-size:9px;letter-spacing:2px;text-transform:uppercase;opacity:.4;margin-top:16px;">
+      <p style="font-size:13px;letter-spacing:2px;text-transform:uppercase;opacity:.4;margin-top:16px;">
         Alle Angaben ohne Gewähr. Alle Rechte vorbehalten.<br>
         Gestaltung: Sinnvoll Dienstleistungen GmbH
       </p>`},
