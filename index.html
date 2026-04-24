@@ -1,120 +1,131 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hotel Möve — Chiasso</title>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--black:#000;--white:#fff;--gold:#c8a96e;--panel-w:540px}
+:root{
+  --black:#1a1208;
+  --white:#faf7f2;
+  --cream:#f0ebe0;
+  --brown:#2c1f0e;
+  --gold:#c8a96e;
+  --gold-light:#e8d5a8;
+  --warm-grey:#8a7d6b;
+  --panel-w:560px;
+}
 html{scroll-behavior:smooth}
-body{font-family:'Fjalla One',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden}
+body{font-family:'Fjalla One',sans-serif;background:var(--cream);color:var(--black);overflow-x:hidden}
 
 /* LANG BAR */
-.lang-bar{position:fixed;top:0;left:0;right:0;z-index:500;background:var(--black);display:flex;justify-content:flex-end;align-items:center;padding:7px 40px;gap:4px}
+.lang-bar{position:fixed;top:0;left:0;right:0;z-index:500;background:var(--brown);display:flex;justify-content:flex-end;align-items:center;padding:7px 40px;gap:4px}
 .lang-btn{background:none;border:none;font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.35);cursor:pointer;padding:4px 10px;transition:color .2s;border-bottom:1px solid transparent}
 .lang-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
 .lang-btn:hover{color:var(--white)}
 .lang-sep{color:rgba(255,255,255,.15);font-size:13px}
 
 /* HEADER */
-header{position:fixed;top:30px;left:0;right:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;background:var(--white);border-bottom:2px solid var(--black)}
+header{position:fixed;top:30px;left:0;right:0;z-index:400;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;background:rgba(250,247,242,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,169,110,.3)}
 .logo-block{display:flex;align-items:center;gap:14px;line-height:1}
-.logo-motif{display:flex;align-items:flex-end;gap:4px;flex-shrink:0}
-.logo-motif .sq{width:22px;height:22px;background:var(--black);flex-shrink:0}
-.logo-motif .ci{width:22px;height:22px;background:var(--black);border-radius:50%;flex-shrink:0}
-.logo-text{display:flex;flex-direction:column;justify-content:center;gap:3px}
-.logo-name{font-size:22px;letter-spacing:4px;text-transform:uppercase;line-height:1;display:block}
-.logo-sub{font-size:13px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;line-height:1;display:block}
+.logo-motif{display:flex;align-items:center;gap:3px;flex-shrink:0}
+.logo-motif .sq{width:18px;height:18px;background:var(--brown);flex-shrink:0;display:block}
+.logo-motif .ci{width:18px;height:18px;background:var(--gold);border-radius:50%;flex-shrink:0;display:block}
+.logo-text{display:flex;flex-direction:column;justify-content:center;gap:2px}
+.logo-name{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:2px;color:var(--brown);line-height:1;display:block;font-style:italic}
+.logo-sub{font-family:'Fjalla One',sans-serif;font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;line-height:1;display:block}
 nav{display:flex;align-items:center;gap:24px}
-nav a{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--black);text-decoration:none;transition:color .2s}
+nav a{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--brown);text-decoration:none;transition:color .2s}
 nav a:hover{color:var(--gold)}
-.mews-header-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--black);padding:13px 22px;font-family:'Fjalla One',sans-serif;font-size:15px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
-.mews-header-btn:hover{background:var(--black);color:var(--gold)}
+.mews-header-btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--brown);padding:12px 22px;font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap;border:1px solid var(--gold)}
+.mews-header-btn:hover{background:var(--brown);color:var(--gold)}
 
 /* FIXED BOOKING BUTTON */
 .fixed-book{position:fixed;bottom:32px;right:32px;z-index:600;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.fixed-book-bubble{background:var(--black);color:var(--white);font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;position:relative;animation:bubblePop 3s ease-in-out infinite;white-space:nowrap}
-.fixed-book-bubble::after{content:'';position:absolute;bottom:-6px;right:28px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid var(--black)}
-.fixed-book-btn{display:flex;align-items:center;text-decoration:none;box-shadow:0 8px 32px rgba(0,0,0,.35);animation:floatBtn 3s ease-in-out infinite;position:relative;overflow:hidden}
-.fixed-book-btn::before{content:'';position:absolute;inset:-4px;border:2px solid var(--gold);animation:ringPulse 2s ease-in-out infinite;pointer-events:none}
-.btn-icon{background:var(--gold);color:var(--black);width:72px;height:72px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;transition:background .2s}
-.btn-text-block{background:var(--black);color:var(--white);padding:0 24px;height:72px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;transition:background .2s}
-.btn-text-top{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);line-height:1}
-.btn-text-main{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--white);line-height:1;white-space:nowrap}
-.btn-text-sub{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);line-height:1}
-.fixed-book-btn:hover .btn-icon{background:var(--white)}
+.fixed-book-close{position:absolute;top:-10px;left:-10px;width:22px;height:22px;background:var(--brown);color:var(--gold);border:none;border-radius:50%;font-family:'Fjalla One',sans-serif;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:background .2s;z-index:1}
+.fixed-book-close:hover{background:var(--gold);color:var(--brown)}
+.fixed-book-btn-wrap{position:relative;display:inline-flex}
+.fixed-book-bubble{background:var(--brown);color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;position:relative;animation:bubblePop 3s ease-in-out infinite;white-space:nowrap;font-family:'Fjalla One',sans-serif}
+.fixed-book-bubble::after{content:'';position:absolute;bottom:-6px;right:28px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid var(--brown)}
+.fixed-book-btn{display:flex;align-items:center;text-decoration:none;box-shadow:0 8px 40px rgba(44,31,14,.4);animation:floatBtn 3s ease-in-out infinite;position:relative;overflow:hidden}
+.fixed-book-btn::before{content:'';position:absolute;inset:-3px;border:1px solid var(--gold);animation:ringPulse 2.5s ease-in-out infinite;pointer-events:none}
+.btn-icon{background:var(--gold);color:var(--brown);width:70px;height:70px;display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;transition:background .2s}
+.btn-text-block{background:var(--brown);color:var(--white);padding:0 22px;height:70px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;transition:background .2s}
+.btn-text-top{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);line-height:1}
+.btn-text-main{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--white);line-height:1;white-space:nowrap}
+.btn-text-sub{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);line-height:1}
+.fixed-book-btn:hover .btn-icon{background:var(--gold-light)}
 .fixed-book-btn:hover .btn-text-block{background:var(--gold)}
-.fixed-book-btn:hover .btn-text-main{color:var(--black)}
-.fixed-book-btn:hover .btn-text-top{color:var(--black)}
-.fixed-book-btn:hover .btn-text-sub{color:rgba(0,0,0,.5)}
+.fixed-book-btn:hover .btn-text-main,.fixed-book-btn:hover .btn-text-top,.fixed-book-btn:hover .btn-text-sub{color:var(--brown)}
 @keyframes floatBtn{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @keyframes bubblePop{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.85;transform:scale(1.02)}}
-@keyframes ringPulse{0%{opacity:.8;transform:scale(1)}50%{opacity:0;transform:scale(1.06)}100%{opacity:.8;transform:scale(1)}}
+@keyframes ringPulse{0%{opacity:.7;transform:scale(1)}50%{opacity:0;transform:scale(1.08)}100%{opacity:.7;transform:scale(1)}}
 
 /* HERO */
 .hero{min-height:100vh;padding-top:108px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background-image:url('https://www.movenpickchiasso.com/wp-content/uploads/sites/36/2021/02/bg4.jpg');background-size:cover;background-position:center;z-index:0}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.42) 50%,rgba(0,0,0,.12) 100%)}
-.hero-bird{position:absolute;right:60px;top:120px;opacity:.06;z-index:1;pointer-events:none}
-.hero-content{position:relative;z-index:2;padding:60px 40px;max-width:800px;color:var(--white)}
-.hero-eyebrow{font-size:14px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.hero-title{font-size:clamp(64px,11vw,130px);line-height:.88;letter-spacing:-3px;text-transform:uppercase;margin-bottom:28px}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(26,18,8,.92) 0%,rgba(26,18,8,.5) 45%,rgba(26,18,8,.15) 100%)}
+.hero-bird{position:absolute;right:60px;top:120px;opacity:.05;z-index:1;pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:72px 48px;max-width:840px;color:var(--white)}
+.hero-eyebrow{font-size:13px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-family:'Fjalla One',sans-serif}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(56px,10vw,120px);line-height:.92;letter-spacing:-1px;margin-bottom:32px;font-style:italic}
 .hero-title .accent{color:var(--gold)}
-.hero-body{font-size:15px;letter-spacing:2px;line-height:2;text-transform:uppercase;max-width:460px;margin-bottom:40px;border-left:3px solid var(--gold);padding-left:16px;opacity:.85}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.hero-cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);padding:20px 42px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:2px solid var(--gold);transition:all .25s}
-.hero-cta-primary:hover{background:var(--black);color:var(--gold)}
-.hero-cta-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:20px 42px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:2px solid rgba(255,255,255,.4);transition:all .25s}
-.hero-cta-secondary:hover{border-color:var(--white)}
+.hero-title .straight{font-style:normal}
+.hero-body{font-size:14px;letter-spacing:2px;line-height:2.2;text-transform:uppercase;max-width:480px;margin-bottom:44px;border-left:2px solid var(--gold);padding-left:20px;opacity:.8;font-family:'Fjalla One',sans-serif}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--brown);padding:18px 40px;font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:all .3s}
+.hero-cta-primary:hover{background:transparent;color:var(--gold);border-color:var(--gold)}
+.hero-cta-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:18px 40px;font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,.35);transition:all .3s}
+.hero-cta-secondary:hover{border-color:var(--gold);color:var(--gold)}
 
 /* TICKER */
-.ticker{overflow:hidden;border-top:2px solid var(--black);border-bottom:2px solid var(--black);padding:18px 0;background:var(--white)}
+.ticker{overflow:hidden;border-top:1px solid rgba(200,169,110,.4);border-bottom:1px solid rgba(200,169,110,.4);padding:16px 0;background:var(--cream)}
 .ticker-track{display:flex;gap:60px;animation:ticker 22s linear infinite;white-space:nowrap}
-.ticker-item{font-size:15px;letter-spacing:4px;text-transform:uppercase;display:flex;align-items:center;gap:20px;flex-shrink:0}
+.ticker-item{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--warm-grey);display:flex;align-items:center;gap:20px;flex-shrink:0}
 .ticker-item .dot{color:var(--gold)}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* MEWS STRIP */
-.mews-strip{background:var(--gold);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.mews-strip-title{font-size:28px;text-transform:uppercase;color:var(--black)}
-.mews-strip-sub{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,.5);margin-top:4px}
-.mews-strip-btn{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:var(--white);padding:20px 48px;font-family:'Fjalla One',sans-serif;font-size:15px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:2px solid var(--black);transition:all .25s;white-space:nowrap}
-.mews-strip-btn:hover{background:var(--white);color:var(--black)}
+.mews-strip{background:var(--brown);padding:36px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(200,169,110,.2);border-bottom:1px solid rgba(200,169,110,.2)}
+.mews-strip-title{font-family:'Playfair Display',serif;font-size:26px;color:var(--gold-light);font-style:italic}
+.mews-strip-sub{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:6px;font-family:'Fjalla One',sans-serif}
+.mews-strip-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--brown);padding:18px 44px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:all .3s;white-space:nowrap}
+.mews-strip-btn:hover{background:transparent;color:var(--gold)}
 
 /* TILES */
-.tiles-section{padding:80px 40px}
-.tiles-header{margin-bottom:48px}
-.tiles-header h2{font-size:clamp(32px,5vw,56px);text-transform:uppercase;letter-spacing:-1px}
+.tiles-section{padding:88px 48px;background:var(--cream)}
+.tiles-header{margin-bottom:52px}
+.tiles-header h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);letter-spacing:-0.5px;font-style:italic;color:var(--brown)}
 .tiles-header h2 em{font-style:normal;color:var(--gold)}
-.tiles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;background:var(--black);border:2px solid var(--black)}
-.tile{background:var(--white);padding:40px 32px 52px;cursor:pointer;position:relative;transition:background .2s,color .2s;overflow:hidden}
-.tile::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.tile:hover{background:var(--black);color:var(--white)}
+.tiles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(200,169,110,.25);border:1px solid rgba(200,169,110,.25)}
+.tile{background:var(--cream);padding:40px 32px 56px;cursor:pointer;position:relative;transition:background .3s,color .3s;overflow:hidden}
+.tile::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.tile:hover{background:var(--brown);color:var(--white)}
 .tile:hover::before{transform:scaleX(1)}
 .tile:hover .tile-num{color:var(--gold)}
-.tile:hover .tile-icon{color:rgba(255,255,255,.08)}
-.tile:hover p{opacity:.7}
-.tile.mews-tile:hover{background:var(--gold);color:var(--black)}
-.tile.mews-tile:hover .tile-num{color:rgba(0,0,0,.5)}
-.tile-num{font-size:14px;letter-spacing:4px;color:var(--gold);margin-bottom:24px;transition:color .2s}
-.tile-icon{font-size:40px;letter-spacing:-5px;color:rgba(0,0,0,.07);margin-bottom:16px;line-height:1;transition:color .2s}
-.tile h3{font-size:22px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
-.tile p{font-size:14px;letter-spacing:2px;line-height:1.9;text-transform:uppercase;opacity:.65;transition:opacity .2s}
-.tile-arrow{position:absolute;bottom:24px;right:28px;font-size:16px;opacity:.35;transition:opacity .2s,transform .2s}
+.tile:hover .tile-icon{color:rgba(255,255,255,.06)}
+.tile:hover p{opacity:.65}
+.tile.mews-tile:hover{background:var(--gold);color:var(--brown)}
+.tile.mews-tile:hover .tile-num{color:var(--brown)}
+.tile-num{font-size:13px;letter-spacing:4px;color:var(--gold);margin-bottom:24px;transition:color .2s;font-family:'Fjalla One',sans-serif}
+.tile-icon{font-size:36px;letter-spacing:-4px;color:rgba(44,31,14,.06);margin-bottom:16px;line-height:1;transition:color .2s}
+.tile h3{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:0;margin-bottom:12px;font-style:italic;color:inherit}
+.tile p{font-size:13px;letter-spacing:2px;line-height:2;text-transform:uppercase;opacity:.6;transition:opacity .2s;font-family:'Fjalla One',sans-serif}
+.tile-arrow{position:absolute;bottom:24px;right:28px;font-size:16px;color:var(--gold);opacity:.4;transition:opacity .2s,transform .2s}
 .tile:hover .tile-arrow{opacity:1;transform:translateX(4px)}
 
 /* GALLERY */
-.gallery-section{padding:80px 40px;border-top:2px solid var(--black)}
+.gallery-section{padding:88px 48px;border-top:1px solid rgba(200,169,110,.3);background:var(--white)}
 .gallery-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:12px}
-.gallery-header h2{font-size:clamp(28px,4vw,48px);text-transform:uppercase;letter-spacing:-1px}
+.gallery-header h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,44px);letter-spacing:-0.5px;font-style:italic;color:var(--brown)}
 .gallery-header h2 em{font-style:normal;color:var(--gold)}
-.gallery-header span{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,.35)}
-.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:200px 200px;gap:3px}
+.gallery-header span{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--warm-grey);font-family:'Fjalla One',sans-serif}
+.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:220px 220px;gap:4px}
 .g-img{overflow:hidden;position:relative;cursor:pointer}
-.g-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,filter .4s ease;filter:grayscale(15%)}
-.g-img:hover img{transform:scale(1.06);filter:grayscale(0%)}
+.g-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,filter .4s ease;filter:saturate(85%)}
+.g-img:hover img{transform:scale(1.05);filter:saturate(110%)}
 .g-img:nth-child(1){grid-column:span 5;grid-row:span 2}
 .g-img:nth-child(2){grid-column:span 3}
 .g-img:nth-child(3){grid-column:span 4}
@@ -122,89 +133,89 @@ nav a:hover{color:var(--gold)}
 .g-img:nth-child(5){grid-column:span 2}
 .g-img:nth-child(6){grid-column:span 2}
 .g-img::after{content:'';position:absolute;inset:0;background:var(--gold);opacity:0;transition:opacity .3s;mix-blend-mode:multiply;pointer-events:none}
-.g-img:hover::after{opacity:.12}
+.g-img:hover::after{opacity:.1}
 
 /* REVIEWS */
-.reviews-section{background:var(--black);color:var(--white);padding:80px 40px}
-.reviews-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:24px}
-.reviews-header h2{font-size:clamp(28px,4vw,48px);text-transform:uppercase;letter-spacing:-1px;line-height:1}
+.reviews-section{background:var(--brown);color:var(--white);padding:88px 48px}
+.reviews-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:56px;flex-wrap:wrap;gap:24px}
+.reviews-header h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,44px);letter-spacing:-0.5px;font-style:italic;line-height:1.1;color:var(--gold-light)}
 .reviews-header h2 em{font-style:normal;color:var(--gold)}
-.booking-badge{display:flex;align-items:center;gap:16px;border:1px solid rgba(255,255,255,.12);padding:16px 24px}
-.badge-score{font-size:44px;color:var(--gold);line-height:1}
-.badge-info{display:flex;flex-direction:column;gap:3px}
-.badge-label{font-size:14px;letter-spacing:2px;text-transform:uppercase}
-.badge-count{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.4}
-.badge-source{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:4px}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;background:rgba(255,255,255,.04)}
-.review-card{background:var(--black);padding:32px 28px;border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:16px;transition:border-color .25s}
-.review-card:hover{border-color:var(--gold)}
-.review-quote{font-size:14px;letter-spacing:1.5px;line-height:2;text-transform:uppercase;opacity:.7;flex:1;position:relative;padding-left:18px}
-.review-quote::before{content:'"';position:absolute;left:0;top:-4px;font-size:28px;color:var(--gold);line-height:1;opacity:.55}
-.review-meta{display:flex;align-items:center;justify-content:space-between}
-.review-author{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
-.review-flag{font-size:13px;letter-spacing:2px;text-transform:uppercase;opacity:.3}
+.booking-badge{display:flex;align-items:center;gap:16px;border:1px solid rgba(200,169,110,.3);padding:16px 24px}
+.badge-score{font-family:'Playfair Display',serif;font-size:48px;color:var(--gold);line-height:1}
+.badge-info{display:flex;flex-direction:column;gap:4px}
+.badge-label{font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light)}
+.badge-count{font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.4}
+.badge-source{font-family:'Fjalla One',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:rgba(200,169,110,.1)}
+.review-card{background:var(--brown);padding:36px 28px;border:1px solid rgba(200,169,110,.1);display:flex;flex-direction:column;gap:20px;transition:border-color .3s,background .3s}
+.review-card:hover{border-color:rgba(200,169,110,.4);background:rgba(255,255,255,.04)}
+.review-quote{font-family:'Playfair Display',serif;font-size:15px;line-height:1.8;opacity:.8;flex:1;position:relative;padding-left:20px;font-style:italic;color:var(--gold-light)}
+.review-quote::before{content:'"';position:absolute;left:0;top:-8px;font-size:36px;color:var(--gold);line-height:1;opacity:.5;font-family:'Playfair Display',serif}
+.review-meta{display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px solid rgba(200,169,110,.15)}
+.review-author{font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.review-flag{font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;opacity:.3}
 
 /* HERITAGE */
-.heritage{background:var(--black);color:var(--white);padding:80px 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.heritage-left h2{font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-1px;line-height:1;margin-bottom:24px}
+.heritage{background:var(--cream);color:var(--brown);padding:88px 48px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;border-top:1px solid rgba(200,169,110,.3)}
+.heritage-left h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,56px);letter-spacing:-0.5px;line-height:1.05;margin-bottom:28px;font-style:italic;color:var(--brown)}
 .heritage-left h2 em{font-style:normal;color:var(--gold)}
-.heritage-left p{font-size:14px;letter-spacing:2px;line-height:2;text-transform:uppercase;opacity:.6;max-width:400px}
-.heritage-right{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.heritage-stat{padding:32px 24px;border:1px solid rgba(255,255,255,.08)}
-.heritage-stat .num{font-size:48px;color:var(--gold);line-height:1;margin-bottom:8px}
-.heritage-stat .label{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.4}
+.heritage-left p{font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:2px;line-height:2;text-transform:uppercase;opacity:.6;max-width:400px;color:var(--brown)}
+.heritage-right{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(200,169,110,.25)}
+.heritage-stat{padding:36px 24px;background:var(--cream);border:1px solid rgba(200,169,110,.2)}
+.heritage-stat .num{font-family:'Playfair Display',serif;font-size:52px;color:var(--gold);line-height:1;margin-bottom:8px}
+.heritage-stat .label{font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--warm-grey)}
 
 /* LOCATION */
-.location{padding:80px 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:2px solid var(--black);align-items:start}
-.location-info h2{font-size:48px;text-transform:uppercase;letter-spacing:-1px;line-height:1;margin-bottom:32px}
+.location{padding:88px 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;border-top:1px solid rgba(200,169,110,.3);align-items:start;background:var(--white)}
+.location-info h2{font-family:'Playfair Display',serif;font-size:44px;letter-spacing:-0.5px;line-height:1;margin-bottom:36px;font-style:italic;color:var(--brown)}
 .location-info h2 em{font-style:normal;color:var(--gold)}
-.info-row{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-bottom:1px solid rgba(0,0,0,.1);font-size:14px;letter-spacing:2px;text-transform:uppercase}
-.info-row .icon{color:var(--gold);flex-shrink:0;margin-top:1px}
-.info-row a{color:var(--black);text-decoration:none;transition:color .2s}
+.info-row{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-bottom:1px solid rgba(200,169,110,.2);font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--brown);font-family:'Fjalla One',sans-serif}
+.info-row .icon{color:var(--gold);flex-shrink:0;margin-top:2px}
+.info-row a{color:var(--brown);text-decoration:none;transition:color .2s}
 .info-row a:hover{color:var(--gold)}
-.location-map-box{height:360px;background:var(--black);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;border:2px solid var(--black)}
-.location-map-box p{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.35)}
-.map-motif{font-size:56px;letter-spacing:-8px;color:var(--gold)}
+.location-map-box{height:380px;background:var(--brown);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;border:1px solid rgba(200,169,110,.2)}
+.location-map-box p{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.3);font-family:'Fjalla One',sans-serif}
+.map-motif{font-size:52px;letter-spacing:-6px;color:var(--gold)}
 
 /* FOOTER */
-footer{background:var(--black);color:var(--white);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:3px solid var(--gold)}
-.footer-logo{font-size:18px;letter-spacing:4px;text-transform:uppercase}
-.footer-copy{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.35}
-.footer-sinnvoll{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+footer{background:var(--brown);color:var(--white);padding:44px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(200,169,110,.25)}
+.footer-logo{font-family:'Playfair Display',serif;font-size:18px;letter-spacing:1px;color:var(--gold-light);font-style:italic}
+.footer-copy{font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.3}
+.footer-sinnvoll{font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
 
 /* PANEL */
-.panel-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:700}
+.panel-overlay{display:none;position:fixed;inset:0;background:rgba(26,18,8,.6);backdrop-filter:blur(4px);z-index:700}
 .panel-overlay.active{display:block}
-.panel{position:fixed;top:0;right:-100%;width:min(var(--panel-w),100vw);height:100%;background:var(--white);z-index:701;overflow-y:auto;transition:right .4s cubic-bezier(.4,0,.2,1);border-left:3px solid var(--black);display:flex;flex-direction:column}
+.panel{position:fixed;top:0;right:-100%;width:min(var(--panel-w),100vw);height:100%;background:var(--cream);z-index:701;overflow-y:auto;transition:right .4s cubic-bezier(.4,0,.2,1);border-left:1px solid rgba(200,169,110,.3);display:flex;flex-direction:column}
 .panel.open{right:0}
-.panel-header{padding:40px 40px 28px;border-bottom:2px solid var(--black);position:sticky;top:0;background:var(--white);z-index:1}
-.panel-close{position:absolute;top:20px;right:24px;font-size:22px;background:none;border:none;cursor:pointer;font-family:'Fjalla One',sans-serif;color:var(--black);transition:color .2s}
+.panel-header{padding:40px 40px 28px;border-bottom:1px solid rgba(200,169,110,.3);position:sticky;top:0;background:var(--cream);z-index:1}
+.panel-close{position:absolute;top:20px;right:24px;font-size:22px;background:none;border:none;cursor:pointer;font-family:'Fjalla One',sans-serif;color:var(--brown);transition:color .2s}
 .panel-close:hover{color:var(--gold)}
-.panel-eyebrow{font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.panel-title{font-size:34px;text-transform:uppercase;letter-spacing:-1px;line-height:1}
+.panel-eyebrow{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-family:'Fjalla One',sans-serif}
+.panel-title{font-family:'Playfair Display',serif;font-size:32px;letter-spacing:0;line-height:1;font-style:italic;color:var(--brown)}
 .panel-body{padding:40px;flex:1}
-.panel-body>p{font-size:14px;letter-spacing:1.5px;line-height:2;text-transform:uppercase;margin-bottom:24px;opacity:.75}
+.panel-body>p{font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:1.5px;line-height:2;text-transform:uppercase;margin-bottom:24px;opacity:.7;color:var(--brown)}
 .panel-features{list-style:none;margin-bottom:32px}
-.panel-features li{display:flex;align-items:flex-start;gap:12px;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.panel-features li{display:flex;align-items:flex-start;gap:12px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:14px 0;border-bottom:1px solid rgba(200,169,110,.2);color:var(--brown)}
 .panel-features li::before{content:'■';color:var(--gold);flex-shrink:0;margin-top:1px}
-.mews-panel-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--black);padding:22px;font-family:'Fjalla One',sans-serif;font-size:15px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:2px solid var(--gold);transition:all .25s;margin-bottom:28px;width:100%}
-.mews-panel-btn:hover{background:var(--black);color:var(--gold);border-color:var(--black)}
-.contact-form h4{font-size:13px;letter-spacing:4px;text-transform:uppercase;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--black)}
+.mews-panel-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--brown);padding:22px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:all .3s;margin-bottom:28px;width:100%}
+.mews-panel-btn:hover{background:var(--brown);color:var(--gold);border-color:var(--brown)}
+.contact-form h4{font-family:'Playfair Display',serif;font-size:18px;letter-spacing:0;font-style:italic;color:var(--brown);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid rgba(200,169,110,.3)}
 .form-group{margin-bottom:18px}
-.form-group label{display:block;font-size:15px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 14px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;background:var(--white);border:2px solid var(--black);color:var(--black);outline:none;transition:border-color .2s;appearance:none}
+.form-group label{display:block;font-family:'Fjalla One',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:12px 16px;font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:1px;background:var(--white);border:1px solid rgba(200,169,110,.4);color:var(--brown);outline:none;transition:border-color .2s;appearance:none}
 .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--gold)}
 .form-group textarea{resize:vertical;min-height:90px}
-.btn-submit{width:100%;padding:18px;background:var(--black);color:var(--white);border:2px solid var(--black);font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:all .25s;margin-top:8px}
-.btn-submit:hover{background:var(--gold);border-color:var(--gold);color:var(--black)}
+.btn-submit{width:100%;padding:18px;background:var(--brown);color:var(--white);border:1px solid var(--brown);font-family:'Fjalla One',sans-serif;font-size:14px;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:all .3s;margin-top:8px}
+.btn-submit:hover{background:var(--gold);border-color:var(--gold);color:var(--brown)}
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.fade-up{animation:fadeUp .7s ease forwards;opacity:0}
-.fade-up:nth-child(2){animation-delay:.12s}
-.fade-up:nth-child(3){animation-delay:.24s}
-.fade-up:nth-child(4){animation-delay:.36s}
-.fade-up:nth-child(5){animation-delay:.48s}
+.fade-up{animation:fadeUp .8s ease forwards;opacity:0}
+.fade-up:nth-child(2){animation-delay:.15s}
+.fade-up:nth-child(3){animation-delay:.3s}
+.fade-up:nth-child(4){animation-delay:.45s}
+.fade-up:nth-child(5){animation-delay:.6s}
 
 /* RESPONSIVE */
 @media(max-width:900px){
@@ -216,7 +227,7 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
   .tiles-section{padding:60px 20px}
   .gallery-section{padding:60px 20px}
   .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .g-img{grid-column:span 1 !important;grid-row:span 1 !important;height:160px}
+  .g-img{grid-column:span 1 !important;grid-row:span 1 !important;height:180px}
   .reviews-section{padding:60px 20px}
   .booking-badge{flex-direction:column;align-items:flex-start}
   .heritage{grid-template-columns:1fr;padding:60px 20px}
@@ -233,11 +244,11 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
 
 <!-- LANG BAR -->
 <div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('de')">DE</button>
+  <button class="lang-btn" onclick="setLang('de')">DE</button>
   <span class="lang-sep">·</span>
   <button class="lang-btn" onclick="setLang('fr')">FR</button>
   <span class="lang-sep">·</span>
-  <button class="lang-btn" onclick="setLang('it')">IT</button>
+  <button class="lang-btn active" onclick="setLang('it')">IT</button>
   <span class="lang-sep">·</span>
   <button class="lang-btn" onclick="setLang('en')">EN</button>
 </div>
@@ -251,7 +262,7 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
     </div>
     <div class="logo-text">
       <span class="logo-name">Hotel Möve</span>
-      <span class="logo-sub">Chiasso · Sinnvoll Gastro</span>
+      <span class="logo-sub">■ Chiasso · Sinnvoll Gastro</span>
     </div>
   </div>
   <nav>
@@ -267,7 +278,9 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
 <!-- FIXED BOOKING BUTTON -->
 <div class="fixed-book">
   <div class="fixed-book-bubble" data-i18n="fab_bubble">Beste Preise — nur hier ✓</div>
-  <a href="https://app.mews.com/navigator/PLACEHOLDER-HOTEL-ID" target="_blank" class="fixed-book-btn">
+  <div class="fixed-book-btn-wrap">
+    <button class="fixed-book-close" onclick="document.querySelector('.fixed-book').style.display='none'" title="Schliessen">✕</button>
+    <a href="https://app.mews.com/navigator/PLACEHOLDER-HOTEL-ID" target="_blank" class="fixed-book-btn">
     <div class="btn-icon">■</div>
     <div class="btn-text-block">
       <span class="btn-text-top" data-i18n="fab_top">Direkt &amp; zum besten Preis</span>
@@ -275,6 +288,7 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
       <span class="btn-text-sub" data-i18n="fab_sub">via MEWS · Sofortbestätigung</span>
     </div>
   </a>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -290,7 +304,7 @@ footer{background:var(--black);color:var(--white);padding:40px;display:flex;alig
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow fade-up" data-i18n="hero_eyebrow">■ Herzlich willkommen · Chiasso, Schweiz</div>
-    <h1 class="hero-title fade-up"><span>Hotel</span><br><span class="accent">Möve</span></h1>
+    <h1 class="hero-title fade-up"><span class="straight">Hotel</span><br><span class="accent">Möve</span></h1>
     <p class="hero-body fade-up" data-i18n="hero_body">Eine Tradition, die fliegt.<br>Eine Gastfreundschaft, die bleibt.<br>Chiasso — Tor zur italienischen Schweiz.</p>
     <div class="hero-actions fade-up">
       <a href="https://app.mews.com/navigator/PLACEHOLDER-HOTEL-ID" target="_blank" class="hero-cta-primary" data-i18n="hero_book">■ Zimmer buchen via MEWS</a>
@@ -798,7 +812,7 @@ function closePanel() {
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
-setLang('de');
+setLang('it');
 </script>
 </body>
 </html>
